@@ -1,11 +1,579 @@
 {% extends 'core/base.html' %}
-
+{% load static %}
 {% block titulo %}
-    ZushiDev | Inicio
-{% endblock titulo %}
+  ZushiDev | Inicio
+{% endblock %}
 
 {% block contenido %}
-  <section class="w-100">
-    <h1>Inicio</h1>
-  </section>
+  <div>
+    <!-- Header -->
+    <header id="header" class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-xl-5">
+            <div class="text-container">
+              <div class="section-title">Bienvenido al sitio web de ZushiDev;</div>
+              <h1 class="h1-large">Desarrollo Full Stack.</h1>
+              <p class="p-large">Ofrezco servicios como desarrollador fullstack especializado en Django y Python, creando soluciones web eficientes y robustas.</p>
+              <a class="btn-solid-lg" href="#services">Servicios</a>
+            </div> <!-- end of text-container -->
+          </div> <!-- end of col -->
+          <div class="col-lg-6 col-xl-7">
+            <div class="image-container">
+              <img class="img-fluid" src="{% static 'core/images/header-illustration.svg' %}" alt="alternative" />
+            </div> <!-- end of image-container -->
+          </div> <!-- end of col -->
+        </div> <!-- end of row -->
+      </div> <!-- end of container -->
+    </header>
+    <!-- end of header -->
+    <!-- Services -->
+    <div id="services" class="cards-1">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <!-- Card -->
+            <div class="card">
+              <div class="card-icon blue">
+                <span class="far fa-file-alt"></span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Landing pages</h5>
+                <p>Maximiza el impacto de tu presencia online y aumenta la captación de clientes con landing pages diseñadas a medida para impulsar tus objetivos comerciales.</p>
+                <ul class="list-unstyled li-space-lg">
+                  <li class="d-flex">
+                    <i class="fas fa-check"></i>
+                    <div class="flex-grow-1">Diseño Atractivo y Responsivo</div>
+                  </li>
+                  <li class="d-flex">
+                    <i class="fas fa-check"></i>
+                    <div class="flex-grow-1">Llamadas a la Acción Persuasivas</div>
+                  </li>
+                  <li class="d-flex">
+                    <i class="fas fa-check"></i>
+                    <div class="flex-grow-1">Optimización para Conversiones</div>
+                  </li>
+                  <li class="d-flex">
+                    <i class="fas fa-check"></i>
+                    <div class="flex-grow-1">Integración con Herramientas Analíticas</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- end of card -->
+
+            <!-- Card -->
+            <div class="card">
+              <div class="card-icon yellow">
+                <span class="fas fa-solar-panel"></span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Sitios Corporativos</h5>
+                <p>Desde páginas informativas hasta plataformas interactivas, mi enfoque se centra en crear experiencias web atractivas y profesionales que reflejen la visión y valores de tu negocio, contribuyendo a fortalecer tu presencia en línea y atraer a tu audiencia objetivo.</p>
+                <ul class="list-unstyled li-space-lg">
+                  <li class="d-flex">
+                    <i class="fas fa-check"></i>
+                    <div class="flex-grow-1">Diseño Profesional y Atractivo</div>
+                  </li>
+                  <li class="d-flex">
+                    <i class="fas fa-check"></i>
+                    <div class="flex-grow-1">Funcionalidades Personalizadas</div>
+                  </li>
+                  <li class="d-flex">
+                    <i class="fas fa-check"></i>
+                    <div class="flex-grow-1">Optimización para Dispositivos Móviles</div>
+                  </li>
+                  <li class="d-flex">
+                    <i class="fas fa-check"></i>
+                    <div class="flex-grow-1">Enfoque en Conversión</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- end of card -->
+
+            <!-- Card -->
+            <div class="card">
+              <div class="card-icon red">
+                <span class="fas fa-gift"></span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Tiendas Online</h5>
+                <p>Mi enfoque se centra en la personalización, la seguridad y la integración de soluciones de pago, proporcionando a los clientes una presencia digital efectiva y escalable para impulsar sus negocios en el mundo digital. Con expertise en diseño intuitivo y funcionalidades avanzadas, garantizo el éxito de tu comercio electrónico.</p>
+                <ul class="list-unstyled li-space-lg">
+                  <li class="d-flex">
+                    <i class="fas fa-check"></i>
+                    <div class="flex-grow-1">Diseño Responsivo</div>
+                  </li>
+                  <li class="d-flex">
+                    <i class="fas fa-check"></i>
+                    <div class="flex-grow-1">Seguridad Avanzada</div>
+                  </li>
+                  <li class="d-flex">
+                    <i class="fas fa-check"></i>
+                    <div class="flex-grow-1">Integración de Métodos de Pago</div>
+                  </li>
+                  <li class="d-flex">
+                    <i class="fas fa-check"></i>
+                    <div class="flex-grow-1">Gestión de Inventarios y Pedidos</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- end of card -->
+          </div> <!-- end of col -->
+        </div> <!-- end of row -->
+      </div> <!-- end of container -->
+    </div> <!-- end of cards-1 -->
+    <!-- end of services -->
+
+    <!-- Details 1 -->
+    <div id="details" class="basic-1">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-xl-7">
+            <div class="image-container">
+              <img class="img-fluid" src="{% static 'core/images/details-1.svg' %}" alt="alternative" />
+            </div> <!-- end of image-container -->
+          </div> <!-- end of col -->
+          <div class="col-lg-6 col-xl-5">
+            <div class="text-container">
+              <h2><span>Soluciones Perfectas</span><br /> para tu emprendimiento</h2>
+              <p>Soy un profesional independiente comprometido en ofrecer soluciones robustas y eficientes para impulsar el crecimiento de emprendimientos.</p>
+              <p>Con experiencia en diversas tecnologías, mi objetivo es llevar ideas desde la concepción hasta la implementación, superando expectativas.</p>
+              <p>En un entorno tecnológico en constante evolución, me mantengo a la vanguardia para proporcionar soluciones personalizadas y profesionales en el desarrollo Full Stack.</p>
+              <a class="btn-solid-reg" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Modal</a>
+            </div> <!-- end of text-container -->
+          </div> <!-- end of col -->
+        </div> <!-- end of row -->
+      </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
+    <!-- end of details 1 -->
+
+    <!-- Details Modal -->
+    <div id="staticBackdrop" class="modal fade" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="row">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="col-lg-8">
+              <div class="image-container">
+                <img class="img-fluid" src="{% static 'core/images/details-modal.jpg' %}" alt="alternative" />
+              </div> <!-- end of image-container -->
+            </div> <!-- end of col -->
+            <div class="col-lg-4">
+              <h3>Captura de tus Requerimientos</h3>
+              <hr />
+              <p>Establezco un proceso eficiente para capturar los requerimientos de los clientes, utilizando entrevistas detalladas y análisis de documentos, asegurando una comprensión completa de sus necesidades en el desarrollo de proyectos.</p>
+              <h4>Feedback del usuario</h4>
+              <p>
+                Me especializo en recopilar y analizar el feedback de usuarios para mejorar productos o servicios. Ajusto estrategias para asegurar que el producto cumpla y supere expectativas, garantizando un desarrollo continuo y exitoso.</p>
+              <ul class="list-unstyled li-space-lg">
+                <li class="d-flex">
+                  <i class="fas fa-chevron-right"></i>
+                  <div class="flex-grow-1">Comprensión Integral</div>
+                </li>
+                <li class="d-flex">
+                  <i class="fas fa-chevron-right"></i>
+                  <div class="flex-grow-1">Eficiencia en la Comunicación</div>
+                </li>
+                <li class="d-flex">
+                  <i class="fas fa-chevron-right"></i>
+                  <div class="flex-grow-1">Identificación de Requisitos Esenciales</div>
+                </li>
+                <li class="d-flex">
+                  <i class="fas fa-chevron-right"></i>
+                  <div class="flex-grow-1">Desarrollo de Soluciones Adecuadas</div>
+                </li>
+                <li class="d-flex">
+                  <i class="fas fa-chevron-right"></i>
+                  <div class="flex-grow-1">Adaptabilidad a Cambios</div>
+                </li>
+              </ul>
+              <a id="modalCtaBtn" class="btn-solid-reg" href="#">Detalles</a>
+              <button type="button" class="btn-outline-reg" data-bs-dismiss="modal">Cerrar</button>
+            </div> <!-- end of col -->
+          </div> <!-- end of row -->
+        </div> <!-- end of modal-content -->
+      </div> <!-- end of modal-dialog -->
+    </div> <!-- end of modal -->
+    <!-- end of details modal -->
+
+    <!-- Details 2 -->
+    <div class="counter">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-xl-5">
+            <div class="text-container">
+              <h2><span>Sistemas web impresionantes</span><br /> construido con toneladas de cariño</h2>
+              <p>Busco entregarle a mis futuros clientes la mejor experiencia contratando mis servicios, destacando la calidad, eficiencia y atención personalizada en cada paso del camino. Confía en mi para superar tus expectativas y hacer realidad tus proyectos.</p>
+
+              <!-- Counter -->
+              <div class="counter-container">
+                <div class="counter-cell">
+                  <div data-purecounter-start="0" data-purecounter-end="1" data-purecounter-duration="2" class="purecounter">1</div>
+                  <div class="counter-info">Clientes Felices</div>
+                </div> <!-- end of counter-cell -->
+                <div class="counter-cell red">
+                  <div data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="2" class="purecounter">1</div>
+                  <div class="counter-info">Problemas resueltos</div>
+                </div> <!-- end of counter-cell -->
+              </div> <!-- end of counter-container -->
+              <!-- end of counter -->
+            </div> <!-- end of text-container -->
+          </div> <!-- end of col -->
+          <div class="col-lg-6 col-xl-7">
+            <div class="image-container">
+              <img class="img-fluid" src="{% static 'core/images/details-2.svg' %}" alt="alternative" />
+            </div> <!-- end of image-container -->
+          </div> <!-- end of col -->
+        </div> <!-- end of row -->
+      </div> <!-- end of container -->
+    </div> <!-- end of counter -->
+    <!-- end of details 2 -->
+
+    <!-- Projects -->
+    <div id="projects" class="filter bg-gray">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2 class="h2-heading">Proyectos que he realizado</h2>
+          </div> <!-- end of col -->
+        </div> <!-- end of row -->
+        <div class="row">
+          <div class="col-lg-12">
+            <!-- Filter -->
+            <div class="button-group filters-button-group">
+              <button class="button is-checked" data-filter="*">TODO</button>
+              <button class="button" data-filter=".python">PYTHON</button>
+              <button class="button" data-filter=".php">PHP</button>
+              <button class="button" data-filter=".react">REACT</button>
+            </div> <!-- end of button group -->
+            <div class="grid">
+              <div class="element-item php">
+                <a href="article.html">
+                  <img class="img-fluid" src="{% static 'core/images/project-1.jpg' %}" alt="alternative" />
+                  <p>
+                    <strong>Online banking</strong> - pellentesque tincidunt leo eu laoreedt integer quis vanos compren
+                  </p>
+                </a>
+              </div>
+              <div class="element-item php">
+                <a href="article.html">
+                  <img class="img-fluid" src="{% static 'core/images/project-2.jpg' %}" alt="alternative" />
+                  <p>
+                    <strong>Loans company</strong> - odio semper, interdum orci molestie, mattis lectus pellentesq aliqu
+                  </p>
+                </a>
+              </div>
+              <div class="element-item php">
+                <a href="article.html">
+                  <img class="img-fluid" src="{% static 'core/images/project-3.jpg' %}" alt="alternative" />
+                  <p>
+                    <strong>Refinance firm</strong> - arcu a neque congue finibus doneci malesuada et purus melan bris
+                  </p>
+                </a>
+              </div>
+              <div class="element-item python php">
+                <a href="article.html">
+                  <img class="img-fluid" src="{% static 'core/images/project-4.jpg' %}" alt="alternative" />
+                  <p>
+                    <strong>Financial products</strong> - id aliquam ut malesuada eros utr varius blandit aliquam tinci bist
+                  </p>
+                </a>
+              </div>
+              <div class="element-item python php">
+                <a href="article.html">
+                  <img class="img-fluid" src="{% static 'core/images/project-5.jpg' %}" alt="alternative" />
+                  <p>
+                    <strong>Credit cards</strong> - magna a feugiat cras a semper tellus in rhoncus vehicula tellus rugo
+                  </p>
+                </a>
+              </div>
+              <div class="element-item python react">
+                <a href="article.html">
+                  <img class="img-fluid" src="{% static 'core/images/project-6.jpg' %}" alt="alternative" />
+                  <p>
+                    <strong>Software robots</strong> - vel sodales dolor donec a est sapien integer pharetr bilom conva
+                  </p>
+                </a>
+              </div>
+              <div class="element-item python react">
+                <a href="article.html">
+                  <img class="img-fluid" src="{% static 'core/images/project-7.jpg' %}" alt="alternative" />
+                  <p>
+                    <strong>Company control</strong> - ut quam aliquam elemo de vestibulum fringilla porttitor vanic tres
+                  </p>
+                </a>
+              </div>
+              <div class="element-item python react">
+                <a href="article.html">
+                  <img class="img-fluid" src="{% static 'core/images/project-8.jpg' %}" alt="alternative" />
+                  <p>
+                    <strong>Audit reports</strong> - sed tempor, metus vel pharetra finibus, est ante hendrerit augue
+                  </p>
+                </a>
+              </div>
+              <div class="element-item python react">
+                <a href="article.html">
+                  <img class="img-fluid" src="{% static 'core/images/project-9.jpg' %}" alt="alternative" />
+                  <p>
+                    <strong>Big business</strong> - aliquam semper molestie nisi, at porttitor lacus suscipit in mole richter
+                  </p>
+                </a>
+              </div>
+            </div> <!-- end of grid -->
+            <!-- end of filter -->
+          </div> <!-- end of col -->
+        </div> <!-- end of row -->
+      </div> <!-- end of container -->
+    </div> <!-- end of filter -->
+    <!-- end of projects -->
+
+    <!-- Testimonials -->
+    <div class="slider-1">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <!-- Card Slider -->
+            <div class="slider-container">
+              <div class="swiper-container card-slider">
+                <div class="swiper-wrapper">
+                  <!-- Slide -->
+                  <div class="swiper-slide">
+                    <div class="card">
+                      <img class="quotes" src="{% static 'core/images/quotes.svg' %}" alt="alternative" />
+                      <div class="card-body">
+                        <p class="testimonial-text">Fusce tincidunt dui nec diam varius venenatis. Nullam tristique rutrum odio, ut tincidunt erat dictum in. Etiam et aliquet mi, et vehicula elit fusce porta ullamcorper</p>
+                        <div class="details">
+                          <img class="testimonial-image" src="{% static 'core/images/testimonial-1.jpg' %}" alt="alternative" />
+                          <div class="text">
+                            <div class="testimonial-author">Samantha Bloom</div>
+                            <div class="occupation">Team Leader - Syncnow</div>
+                          </div> <!-- end of text -->
+                        </div> <!-- end of testimonial-details -->
+                      </div>
+                    </div>
+                  </div> <!-- end of swiper-slide -->
+                  <!-- end of slide -->
+
+                  <!-- Slide -->
+                  <div class="swiper-slide">
+                    <div class="card">
+                      <img class="quotes" src="{% static 'core/images/quotes.svg' %}" alt="alternative" />
+                      <div class="card-body">
+                        <p class="testimonial-text">Mauris ut mattis nisl. Nunc ultrices nisi eget nisl pulvinar iaculis vitae ac nulla. Nullam fringilla varius blandit. Nam sit amet eleifend justo blogo rovan de chichis kokos venir dab</p>
+                        <div class="details">
+                          <img class="testimonial-image" src="{% static 'core/images/testimonial-2.jpg' %}" alt="alternative" />
+                          <div class="text">
+                            <div class="testimonial-author">Mike Page</div>
+                            <div class="occupation">Developer - Chainlink</div>
+                          </div> <!-- end of text -->
+                        </div> <!-- end of testimonial-details -->
+                      </div>
+                    </div>
+                  </div> <!-- end of swiper-slide -->
+                  <!-- end of slide -->
+
+                  <!-- Slide -->
+                  <div class="swiper-slide">
+                    <div class="card">
+                      <img class="quotes" src="{% static 'core/images/quotes.svg' %}" alt="alternative" />
+                      <div class="card-body">
+                        <p class="testimonial-text">Nam sit amet eleifend justo. Aliquam sit amet lacinia enim, eget facilisis ex. Ut pretium cursus eleifend. Integer feugiat malesuada quam vel basil venis proca jilo</p>
+                        <div class="details">
+                          <img class="testimonial-image" src="{% static 'core/images/testimonial-3.jpg' %}" alt="alternative" />
+                          <div class="text">
+                            <div class="testimonial-author">Mary Longhorn</div>
+                            <div class="occupation">Manager - Firstdev</div>
+                          </div> <!-- end of text -->
+                        </div> <!-- end of testimonial-details -->
+                      </div>
+                    </div>
+                  </div> <!-- end of swiper-slide -->
+                  <!-- end of slide -->
+
+                  <!-- Slide -->
+                  <div class="swiper-slide">
+                    <div class="card">
+                      <img class="quotes" src="{% static 'core/images/quotes.svg' %}" alt="alternative" />
+                      <div class="card-body">
+                        <p class="testimonial-text">Lorem ipsum dolor sit amet, consectetur ing elit. Nulla id nisl tempus risus facilisis efficr ut tincidunt vitae enim non vehicula. Phases vitae metus in felis gravida ultrices zimbo</p>
+                        <div class="details">
+                          <img class="testimonial-image" src="{% static 'core/images/testimonial-4.jpg' %}" alt="alternative" />
+                          <div class="text">
+                            <div class="testimonial-author">Ronny Drummer</div>
+                            <div class="occupation">Designer - Sawdust</div>
+                          </div> <!-- end of text -->
+                        </div> <!-- end of testimonial-details -->
+                      </div>
+                    </div>
+                  </div> <!-- end of swiper-slide -->
+                  <!-- end of slide -->
+                </div> <!-- end of swiper-wrapper -->
+
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <!-- end of add arrows -->
+              </div> <!-- end of swiper-container -->
+            </div> <!-- end of slider-container -->
+            <!-- end of card slider -->
+          </div> <!-- end of col -->
+        </div> <!-- end of row -->
+      </div> <!-- end of container -->
+    </div> <!-- end of slider-1 -->
+    <!-- end of testimonials -->
+
+    <!-- Pricing -->
+    <div id="pricing" class="cards-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2 class="h2-heading"><span>Choose the package</span><br /> that fits your budget and project</h2>
+          </div> <!-- end of col -->
+        </div> <!-- end of row -->
+        <div class="row">
+          <div class="col-lg-12">
+            <!-- Card -->
+            <div class="card">
+              <div class="card-body">
+                <div class="card-title">
+                  <img class="decoration-lines" src="{% static 'core/images/decoration-lines.svg' %}" alt="alternative" />
+                  <span>Landing page</span>
+                  <img class="decoration-lines flipped" src="{% static 'core/images/decoration-lines.svg' %}" alt="alternative" />
+                </div>
+                <ul class="list-unstyled li-space-lg">
+                  <li>Fusce pulvinar eu mi acm</li>
+                  <li>Curabitur consequat nisl bro</li>
+                  <li>Reget facilisis molestie</li>
+                  <li>Vivamus vitae sem in tortor</li>
+                  <li>Pharetra vehicula ornares</li>
+                  <li>Vivamus dignissim sit amet</li>
+                  <li>Ut convallis aliquama set</li>
+                </ul>
+                <div class="price">$200</div>
+                <a href="#contact" class="btn-outline-reg">Get quote</a>
+              </div>
+            </div>
+            <!-- end of card -->
+
+            <!-- Card -->
+            <div class="card">
+              <div class="card-body">
+                <div class="card-title">
+                  <img class="decoration-lines" src="{% static 'core/images/decoration-lines.svg' %}" alt="alternative" />
+                  <span>Corporate site</span>
+                  <img class="decoration-lines flipped" src="{% static 'core/images/decoration-lines.svg' %}" alt="alternative" />
+                </div>
+                <ul class="list-unstyled li-space-lg">
+                  <li>Nunc commodo magna quis</li>
+                  <li>Lacus fermentum tincidunt</li>
+                  <li>Nullam lobortis porta diam</li>
+                  <li>Announcing of invita mro</li>
+                  <li>Dictum metus placerat luctus</li>
+                  <li>Sed laoreet blandit mollis</li>
+                  <li>Mauris non luctus est</li>
+                </ul>
+                <div class="price">$300</div>
+                <a href="#contact" class="btn-outline-reg">Get quote</a>
+              </div>
+            </div>
+            <!-- end of card -->
+
+            <!-- Card -->
+            <div class="card">
+              <div class="card-body">
+                <div class="card-title">
+                  <img class="decoration-lines" src="{% static 'core/images/decoration-lines.svg' %}" alt="alternative" />
+                  <span>Online shop</span>
+                  <img class="decoration-lines flipped" src="{% static 'core/images/decoration-lines.svg' %}" alt="alternative" />
+                </div>
+                <ul class="list-unstyled li-space-lg">
+                  <li>Quisque rutrum mattis</li>
+                  <li>Quisque tristique cursus lacus</li>
+                  <li>Interdum sollicitudin maec</li>
+                  <li>Quam posuere, pellentesque</li>
+                  <li>Est nec, gravida turpis integer</li>
+                  <li>Mollis felis. Integer id quam</li>
+                  <li>Id tellus hendrerit lacinia</li>
+                </ul>
+                <div class="price">$400</div>
+                <a href="#contact" class="btn-outline-reg">Get quote</a>
+              </div>
+            </div>
+            <!-- end of card -->
+          </div> <!-- end of col -->
+        </div> <!-- end of row -->
+      </div> <!-- end of container -->
+    </div> <!-- end of cards-2 -->
+    <!-- end of pricing -->
+
+    <!-- Invitation -->
+    <div class="basic-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="text-container">
+              <h4>In gravida at nunc sodales pretium. Vivamus semper, odio vitae mattis auctor, elit elit semper magna rico</h4>
+              <p class="p-large">Ac tristique velit sapien vitae eros. Praesent ut erat a tellus cursus pharetra finibus posuere nisi. Vivamus feugiat tincidunt sem pre toro</p>
+            </div> <!-- end of text-container -->
+          </div> <!-- end of col -->
+        </div> <!-- end of row -->
+      </div> <!-- end of container -->
+    </div> <!-- end of basic-2 -->
+    <!-- end of invitation -->
+
+    <!-- Contact -->
+    <div id="contact" class="form-1">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2 class="h2-heading"><span>Use the following form to</span><br /> request a quote for your project</h2>
+            <p class="p-heading">Vel malesuada sapien condimentum nec. Fusce interdum nec urna et finibus pulvinar tortor id</p>
+            <ul class="list-unstyled li-space-lg">
+              <li>
+                <i class="fas fa-map-marker-alt"></i> &nbsp;22 Praesentum, Pharetra Fin, CB 12345, KL
+              </li>
+              <li>
+                <i class="fas fa-phone"></i> &nbsp;<a href="tel:00817202212">+81 720 2212</a>
+              </li>
+              <li>
+                <i class="fas fa-envelope"></i> &nbsp;<a href="mailto:lorem@ipsum.com">lorem@ipsum.com</a>
+              </li>
+            </ul>
+          </div> <!-- end of col -->
+        </div> <!-- end of row -->
+        <div class="row">
+          <div class="col-lg-10 offset-lg-1">
+            <!-- Contact Form -->
+            <form>
+              <div class="form-group">
+                <input type="text" class="form-control-input" placeholder="Name" required />
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control-input" placeholder="Email" required />
+              </div>
+              <div class="form-group">
+                <select class="form-control-select" required>
+                  <option class="select-option" value="" disabled selected>Project type</option>
+                  <option class="select-option" value="Company Website">Company Website</option>
+                  <option class="select-option" value="Landing Page">Landing Page</option>
+                  <option class="select-option" value="Online Shop">Online Shop</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control-textarea" placeholder="Message" required></textarea>
+              </div>
+              <div class="form-group">
+                <button type="submit" class="form-control-submit-button">Submit</button>
+              </div>
+            </form>
+            <!-- end of contact form -->
+          </div> <!-- end of col -->
+        </div> <!-- end of row -->
+      </div> <!-- end of container -->
+    </div> <!-- end of form-1 -->
+    <!-- end of contact -->
+  </div>
 {% endblock %}
