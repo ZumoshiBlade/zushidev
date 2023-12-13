@@ -12,6 +12,8 @@ class Proyecto(models.Model):
     titulo = models.CharField(max_length=200)
     descripcion = models.CharField(max_length=500)
     fecha_prod = models.DateField()
+    sitio_web = models.CharField(null=True)
+    imagen = models.ImageField(upload_to="proyectos", null=True)
     
     def __str__(self):
         return self.titulo
