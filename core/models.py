@@ -10,7 +10,8 @@ class Tecnologia(models.Model):
 
 class Proyecto(models.Model):
     titulo = models.CharField(max_length=200)
-    descripcion = models.CharField(max_length=500)
+    descripcion_corta = models.CharField(max_length=150)
+    descripcion_larga = models.TextField(blank=True, null=True, verbose_name='Descripción larga')
     fecha_prod = models.DateField()
     sitio_web = models.CharField(null=True)
     imagen = models.ImageField(upload_to="proyectos", null=True)
@@ -21,9 +22,12 @@ class Proyecto(models.Model):
         
 class Tecnologia_Proyecto(models.Model):
     proyecto = models.ForeignKey(Proyecto, on_delete=models.CASCADE)
-    tecnologia = models.OneToOneField(Tecnologia, on_delete=models.CASCADE, primary_key=True)
+    tecnologia = models.OneToOneField(Tecnologia, on_delete=models.CASCADE)
 
     def __str__(self):
         return f"{self.proyecto.titulo} - {self.tecnologia.nombre}"
+    
+
+
           
     

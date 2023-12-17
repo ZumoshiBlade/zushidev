@@ -4,8 +4,7 @@ from core.models import *
 # Create your views here.
 
 def home(request):
-    return render(request, "core/home.html")
+    proyectos = Proyecto.objects.all()
+    context = {"lista_proyectos": proyectos}
+    return render(request, "core/home.html", context)
 
-def proyectos(request):
-    context = {"lista_proyectos" : Proyecto.objects.all()}
-    return render(request, "core/proyectos.html", context)

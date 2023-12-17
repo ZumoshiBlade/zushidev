@@ -1,5 +1,4 @@
 /* Description: Custom JS file */
-
 /* Navigation*/
 // Collapse the navbar by adding the top-nav-collapse class
 window.onscroll = function () {
@@ -153,3 +152,4 @@ function topFunction() {
 	document.body.scrollTop = 0; // for Safari
 	document.documentElement.scrollTop = 0; // for Chrome, Firefox, IE and Opera
 }
+
