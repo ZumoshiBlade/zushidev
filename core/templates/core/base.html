@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}" />
     <link rel="stylesheet" href="{% static 'core/css/fontawesome-all.min.css' %}" />
     <link rel="stylesheet" href="{% static 'core/css/styles.css' %}" />
+    <link rel="stylesheet" href="{% static 'core/css/custom.css' %}" />
     <link rel="stylesheet" href="{% static 'core/css/swiper.css' %}" />
 
     <title>
@@ -22,7 +23,7 @@
         <!-- Image Logo -->
         <!--<a class="navbar-brand logo-image" href="index.html"><img src="{% static 'core/images/logo.svg' %}" alt="alternative" /></a>-->
         <!-- Text Logo - Use this if you don't have a graphic logo -->
-        <a class="navbar-brand logo-text" href="index.html">ZushiDev;</a>
+        <a class="navbar-brand logo-text" href="{% url 'home' %}">ZushiDev;</a>
 
         <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 
@@ -93,7 +94,7 @@
           </div> 
           <div class="col-lg-6">
             <p class="p-small statement">
-              Copyright © <a href="#">ZushiDev</a>
+              Copyright © <a href="#">ZushiDev 2024</a>
             </p>
           </div> 
         </div> 
