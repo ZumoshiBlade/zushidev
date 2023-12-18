@@ -1,0 +1,22 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+
+.typeo{
+    font-family: 'Source Code Pro', monospace;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(40, 44, 41);
+    font-size: 25px;
+    color: white;
+    height: 120px;
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .typeo {
+        margin: 20px 0px;
+        font-size: 23px; /* Cambia el tamaño de la fuente para pantallas más pequeñas */
+    }
+}

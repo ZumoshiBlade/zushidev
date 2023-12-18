@@ -82,7 +82,8 @@ WSGI_APPLICATION = 'zushidev.wsgi.application'
 import dj_database_url
 
 DATABASES = {
-    'default': dj_database_url.config(             
+    'default': dj_database_url.config(        
+        # Feel free to alter this value to suit your needs.        
         default='postgres://zumoshiblade:TcsF4pDTBj4iB5RSr8ZGlnXcmQrCdeFd@dpg-clrsonkm7d1c73f51ln0-a.oregon-postgres.render.com/zushidev',        
         conn_max_age=600    
 )}
@@ -141,7 +142,7 @@ STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / "static"
 
 MEDIA_URL = 'media/'
-MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
