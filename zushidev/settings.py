@@ -21,13 +21,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-w54ty(d3ijriiq12nkb+zgev)-gyfs_l6llu4vsxc_b^r*quq_'
+SECRET_KEY = os.environ.get('SECRET_KEY', default='django-insecure-w54ty(d3ijriiq12nkb+zgev)-gyfs_l6llu4vsxc_b^r*quq_')  # 'django-insecure-w54ty(d3ijriiq12nkb+zgev)-gyfs_l6llu4vsxc_b^r*quq_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = 'RENDER' not in os.environ  # True
 
 ALLOWED_HOSTS = []
 
+RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+if RENDER_EXTERNAL_HOSTNAME:    
+    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
 # Application definition
 
@@ -43,6 +46,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -75,16 +79,28 @@ WSGI_APPLICATION = 'zushidev.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+import dj_database_url
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'zushidev',
-        'USER': 'zumoshiblade',
-        'PASSWORD': 'TcsF4pDTBj4iB5RSr8ZGlnXcmQrCdeFd',
-        'HOST': 'dpg-clrsonkm7d1c73f51ln0-a.oregon-postgres.render.com',   # Puedes cambiar esto según la ubicación de tu base de datos
-        'PORT': '5432',        # Puerto predeterminado de PostgreSQL
-    }
-}
+    'default': dj_database_url.config(        
+        # Feel free to alter this value to suit your needs.        
+        default='postgres://zumoshiblade:TcsF4pDTBj4iB5RSr8ZGlnXcmQrCdeFd@dpg-clrsonkm7d1c73f51ln0-a.oregon-postgres.render.com/zushidev',        
+        conn_max_age=600    
+    )}
+
+# postgres://zumoshiblade:TcsF4pDTBj4iB5RSr8ZGlnXcmQrCdeFd@dpg-clrsonkm7d1c73f51ln0-a/zushidev BASE DE DATOS INTERNA
+# postgres://zumoshiblade:TcsF4pDTBj4iB5RSr8ZGlnXcmQrCdeFd@dpg-clrsonkm7d1c73f51ln0-a.oregon-postgres.render.com/zushidev BASE DE DATOS EXTERNA
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'zushidev',
+#         'USER': 'zumoshiblade',
+#         'PASSWORD': 'TcsF4pDTBj4iB5RSr8ZGlnXcmQrCdeFd',
+#         'HOST': 'dpg-clrsonkm7d1c73f51ln0-a.oregon-postgres.render.com',   # Puedes cambiar esto según la ubicación de tu base de datos
+#         'PORT': '5432',        # Puerto predeterminado de PostgreSQL
+#     }
+# }
 
 
 
@@ -123,7 +139,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
+STATIC_ROOT = BASE_DIR / "static"
 
 MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
