@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{% static 'core/css/styles.css' %}" />
     <link rel="stylesheet" href="{% static 'core/css/custom.css' %}" />
     <link rel="stylesheet" href="{% static 'core/css/swiper.css' %}" />
+    <link rel="shortcut icon" href="{% static 'core/images/zb-icon.ico' %}" type="image/x-icon">
 
     <title>
       {% block titulo %}{% endblock %}
@@ -20,8 +21,6 @@
     <!-- Navigation -->
     <nav id="navbarExample" class="navbar navbar-expand-lg fixed-top navbar-light" aria-label="Main navigation">
       <div class="container">
-        <!-- Image Logo -->
-        <!--<a class="navbar-brand logo-image" href="index.html"><img src="{% static 'core/images/logo.svg' %}" alt="alternative" /></a>-->
         <!-- Text Logo - Use this if you don't have a graphic logo -->
         <a class="navbar-brand logo-text" href="{% url 'home' %}">ZushiDev;</a>
 
