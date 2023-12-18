@@ -86,7 +86,7 @@ DATABASES = {
         # Feel free to alter this value to suit your needs.        
         default='postgres://zumoshiblade:TcsF4pDTBj4iB5RSr8ZGlnXcmQrCdeFd@dpg-clrsonkm7d1c73f51ln0-a.oregon-postgres.render.com/zushidev',        
         conn_max_age=600    
-    )}
+)}
 
 # postgres://zumoshiblade:TcsF4pDTBj4iB5RSr8ZGlnXcmQrCdeFd@dpg-clrsonkm7d1c73f51ln0-a/zushidev BASE DE DATOS INTERNA
 # postgres://zumoshiblade:TcsF4pDTBj4iB5RSr8ZGlnXcmQrCdeFd@dpg-clrsonkm7d1c73f51ln0-a.oregon-postgres.render.com/zushidev BASE DE DATOS EXTERNA
